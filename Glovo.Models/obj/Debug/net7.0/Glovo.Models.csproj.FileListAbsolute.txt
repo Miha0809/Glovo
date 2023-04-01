@@ -1,0 +1,12 @@
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Glovo.Models\bin\Debug\net7.0\Glovo.Models.deps.json
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Glovo.Models\bin\Debug\net7.0\Glovo.Models.dll
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Glovo.Models\bin\Debug\net7.0\Glovo.Models.pdb
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Glovo.Models\obj\Debug\net7.0\Glovo.Models.csproj.AssemblyReference.cache
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Glovo.Models\obj\Debug\net7.0\Glovo.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Glovo.Models\obj\Debug\net7.0\Glovo.Models.AssemblyInfoInputs.cache
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Glovo.Models\obj\Debug\net7.0\Glovo.Models.AssemblyInfo.cs
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Glovo.Models\obj\Debug\net7.0\Glovo.Models.csproj.CoreCompileInputs.cache
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Glovo.Models\obj\Debug\net7.0\Glovo.Models.dll
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Glovo.Models\obj\Debug\net7.0\refint\Glovo.Models.dll
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Glovo.Models\obj\Debug\net7.0\Glovo.Models.pdb
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Glovo.Models\obj\Debug\net7.0\ref\Glovo.Models.dll

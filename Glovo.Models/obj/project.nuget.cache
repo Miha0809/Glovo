@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "2NuYm21qexHBZDqkCVia58eWpVDExfj7h/9k+5Nroau1KTXHPAvJQL/395eLlm+1ix+pajFs4lcUr/Cto6r9iQ==",
+  "success": true,
+  "projectFilePath": "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Glovo.Models\\Glovo.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mark\\.nuget\\packages\\servicestack.interfaces\\6.7.0\\servicestack.interfaces.6.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

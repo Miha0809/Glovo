@@ -1,0 +1,15 @@
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\bin\Debug\net7.0\Client.Models.deps.json
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\bin\Debug\net7.0\Client.Models.dll
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\bin\Debug\net7.0\Client.Models.pdb
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\bin\Debug\net7.0\Glovo.Models.dll
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\bin\Debug\net7.0\Glovo.Models.pdb
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\obj\Debug\net7.0\Client.Models.csproj.AssemblyReference.cache
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\obj\Debug\net7.0\Client.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\obj\Debug\net7.0\Client.Models.AssemblyInfoInputs.cache
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\obj\Debug\net7.0\Client.Models.AssemblyInfo.cs
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\obj\Debug\net7.0\Client.Models.csproj.CoreCompileInputs.cache
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\obj\Debug\net7.0\Client.Models.csproj.CopyComplete
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\obj\Debug\net7.0\Client.Models.dll
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\obj\Debug\net7.0\refint\Client.Models.dll
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\obj\Debug\net7.0\Client.Models.pdb
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\obj\Debug\net7.0\ref\Client.Models.dll

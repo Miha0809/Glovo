@@ -1,0 +1,59 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:48075",
+      "sslPort": 44377
+    }
+  },
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "launchUrl": "",
+      "applicationUrl": "http://localhost:5183",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ACCESS_SECRET_KEY": "ThisIsAccessSecretKey123456789HaHaHaHa!",
+        "ACCESS_TIME_LIFE_KAY_MIN": "5",
+        "REFRESH_SECRET_KEY": "ThisIsRefreshSecretKey123456789HaHaHaHa!",
+        "REFRESH_TIME_LIFE_KAY_MIN": "256",
+        "ISSUER": "Issuer",
+        "AUDIENCE": "Audience"
+      }
+    },
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "launchUrl": "weatherforecast",
+      "applicationUrl": "https://localhost:7197;http://localhost:5183",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ACCESS_SECRET_KEY": "ThisIsAccessSecretKey123456789HaHaHaHa!",
+        "ACCESS_TIME_LIFE_KAY_MIN": "5",
+        "REFRESH_SECRET_KEY": "ThisIsRefreshSecretKey123456789HaHaHaHa!",
+        "REFRESH_TIME_LIFE_KAY_MIN": "256",
+        "ISSUER": "Issuer",
+        "AUDIENCE": "Audience"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": false,
+      "launchUrl": "",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ACCESS_SECRET_KEY": "ThisIsAccessSecretKey123456789HaHaHaHa!",
+        "ACCESS_TIME_LIFE_KAY_MIN": "5",
+        "REFRESH_SECRET_KEY": "ThisIsRefreshSecretKey123456789HaHaHaHa!",
+        "REFRESH_TIME_LIFE_KAY_MIN": "256",
+        "ISSUER": "Issuer",
+        "AUDIENCE": "Audience"
+      }
+    }
+  }
+}

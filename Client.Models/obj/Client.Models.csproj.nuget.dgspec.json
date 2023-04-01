@@ -1,0 +1,196 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Client.Models\\Client.Models.csproj": {}
+  },
+  "projects": {
+    "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Client.Models\\Client.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Client.Models\\Client.Models.csproj",
+        "projectName": "Client.Models",
+        "projectPath": "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Client.Models\\Client.Models.csproj",
+        "packagesPath": "C:\\Users\\Mark\\.nuget\\packages\\",
+        "outputPath": "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Client.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mark\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Configure.Models\\Configure.Models.csproj": {
+                "projectPath": "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Configure.Models\\Configure.Models.csproj"
+              },
+              "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Glovo.Models\\Glovo.Models.csproj": {
+                "projectPath": "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Glovo.Models\\Glovo.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "ServiceStack.Interfaces": {
+              "target": "Package",
+              "version": "[6.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Configure.Models\\Configure.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Configure.Models\\Configure.Models.csproj",
+        "projectName": "Configure.Models",
+        "projectPath": "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Configure.Models\\Configure.Models.csproj",
+        "packagesPath": "C:\\Users\\Mark\\.nuget\\packages\\",
+        "outputPath": "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Configure.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mark\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Glovo.Models\\Glovo.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Glovo.Models\\Glovo.Models.csproj",
+        "projectName": "Glovo.Models",
+        "projectPath": "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Glovo.Models\\Glovo.Models.csproj",
+        "packagesPath": "C:\\Users\\Mark\\.nuget\\packages\\",
+        "outputPath": "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Glovo.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mark\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Configure.Models\\Configure.Models.csproj": {
+                "projectPath": "D:\\Mark\\Programming\\Projects\\Back-end\\C#\\ASP.NET\\Glovo\\Configure.Models\\Configure.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "ServiceStack.Interfaces": {
+              "target": "Package",
+              "version": "[6.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
