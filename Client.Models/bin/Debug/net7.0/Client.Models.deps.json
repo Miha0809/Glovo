@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "Client.Models/1.0.0": {
         "dependencies": {
+          "Configure.Models": "1.0.0",
           "Glovo.Models": "1.0.0",
           "ServiceStack.Interfaces": "6.7.0"
         },
@@ -23,8 +24,14 @@
           }
         }
       },
+      "Configure.Models/1.0.0": {
+        "runtime": {
+          "Configure.Models.dll": {}
+        }
+      },
       "Glovo.Models/1.0.0": {
         "dependencies": {
+          "Configure.Models": "1.0.0",
           "ServiceStack.Interfaces": "6.7.0"
         },
         "runtime": {
@@ -45,6 +52,11 @@
       "sha512": "sha512-0sYiqGX0oSjELmNWJ3yQeUjHK2dgDElQlsLXcbsW+wa1ukD4Jc+r0xvq9b5PVvhd+S0NB5prsC3rV1CxcGKV4g==",
       "path": "servicestack.interfaces/6.7.0",
       "hashPath": "servicestack.interfaces.6.7.0.nupkg.sha512"
+    },
+    "Configure.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Glovo.Models/1.0.0": {
       "type": "project",

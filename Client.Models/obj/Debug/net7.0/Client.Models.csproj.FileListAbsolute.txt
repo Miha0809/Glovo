@@ -13,3 +13,5 @@ D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\obj\Debug\n
 D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\obj\Debug\net7.0\refint\Client.Models.dll
 D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\obj\Debug\net7.0\Client.Models.pdb
 D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\obj\Debug\net7.0\ref\Client.Models.dll
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\bin\Debug\net7.0\Configure.Models.dll
+D:\Mark\Programming\Projects\Back-end\C#\ASP.NET\Glovo\Client.Models\bin\Debug\net7.0\Configure.Models.pdb

@@ -6,14 +6,136 @@
     <projectFile profileName="https">Glovo/Glovo.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c0e71be-9654-4177-a6ab-eeed56dff163" name="Changes" comment="" />
+    <list default="true" id="7c0e71be-9654-4177-a6ab-eeed56dff163" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Glovo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Glovo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.Models/bin/Debug/net7.0/Client.Models.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/bin/Debug/net7.0/Client.Models.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.Models/bin/Debug/net7.0/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/bin/Debug/net7.0/Client.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.Models/bin/Debug/net7.0/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/bin/Debug/net7.0/Client.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.Models/bin/Debug/net7.0/Glovo.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/bin/Debug/net7.0/Glovo.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.Models/bin/Debug/net7.0/Glovo.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/bin/Debug/net7.0/Glovo.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/Client.Models.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/Client.Models.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/Client.Models.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/Client.Models.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/Client.Models.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/Client.Models.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/Client.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/Client.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/ref/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/ref/Client.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/refint/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/refint/Client.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client.Models/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Client.Models/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Companies.Models/Company.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Companies.Models/Company.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Companies.Models/bin/Debug/net7.0/Companies.Models.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Companies.Models/bin/Debug/net7.0/Companies.Models.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Companies.Models/bin/Debug/net7.0/Companies.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Companies.Models/bin/Debug/net7.0/Companies.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Companies.Models/bin/Debug/net7.0/Companies.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Companies.Models/bin/Debug/net7.0/Companies.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Companies.Models/bin/Debug/net7.0/Glovo.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Companies.Models/bin/Debug/net7.0/Glovo.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Companies.Models/bin/Debug/net7.0/Glovo.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Companies.Models/bin/Debug/net7.0/Glovo.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/Companies.Models.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/Companies.Models.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/Companies.Models.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/Companies.Models.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/Companies.Models.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/Companies.Models.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/Companies.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/Companies.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/Companies.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/Companies.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/ref/Companies.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/ref/Companies.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/refint/Companies.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/refint/Companies.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Companies.Models/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Companies.Models/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configure.Models/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Configure.Models/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Courier.Models/obj/Debug/net7.0/Courier.Models.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Courier.Models/obj/Debug/net7.0/Courier.Models.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Courier.Models/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Courier.Models/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Models/bin/Debug/net7.0/Glovo.Models.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Models/bin/Debug/net7.0/Glovo.Models.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Models/bin/Debug/net7.0/Glovo.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Models/bin/Debug/net7.0/Glovo.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Models/bin/Debug/net7.0/Glovo.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Models/bin/Debug/net7.0/Glovo.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Models/obj/Debug/net7.0/Glovo.Models.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Models/obj/Debug/net7.0/Glovo.Models.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Models/obj/Debug/net7.0/Glovo.Models.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Models/obj/Debug/net7.0/Glovo.Models.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Models/obj/Debug/net7.0/Glovo.Models.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Models/obj/Debug/net7.0/Glovo.Models.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Models/obj/Debug/net7.0/Glovo.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Models/obj/Debug/net7.0/Glovo.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Models/obj/Debug/net7.0/Glovo.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Models/obj/Debug/net7.0/Glovo.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Models/obj/Debug/net7.0/ref/Glovo.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Models/obj/Debug/net7.0/ref/Glovo.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Models/obj/Debug/net7.0/refint/Glovo.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Models/obj/Debug/net7.0/refint/Glovo.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Models/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Models/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/GlovoDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/GlovoDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Client.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Client.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Companies.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Companies.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Companies.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Companies.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Curier.Models.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Curier.Models.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Glovo.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Glovo.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Glovo.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Glovo.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Glovo.Services.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Glovo.Services.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Glovo.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Glovo.Services.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Glovo.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/bin/Debug/net7.0/Glovo.Services.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/obj/Debug/net7.0/Glovo.Services.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/obj/Debug/net7.0/Glovo.Services.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/obj/Debug/net7.0/Glovo.Services.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/obj/Debug/net7.0/Glovo.Services.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/obj/Debug/net7.0/Glovo.Services.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/obj/Debug/net7.0/Glovo.Services.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/obj/Debug/net7.0/Glovo.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/obj/Debug/net7.0/Glovo.Services.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/obj/Debug/net7.0/Glovo.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/obj/Debug/net7.0/Glovo.Services.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/obj/Debug/net7.0/ref/Glovo.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/obj/Debug/net7.0/ref/Glovo.Services.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/obj/Debug/net7.0/refint/Glovo.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/obj/Debug/net7.0/refint/Glovo.Services.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo.Services/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo.Services/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/Controllers/Authentication/AuthenticationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/Controllers/Authentication/AuthenticationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/Glovo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/Glovo.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Client.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Client.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Client.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Client.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Companies.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Companies.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Companies.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Companies.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Curier.Models.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Curier.Models.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Glovo.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Glovo.Models.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Glovo.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Glovo.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Glovo.Services.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Glovo.Services.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Glovo.Services.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Glovo.Services.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Glovo.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Glovo.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Glovo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Glovo.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Glovo.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Glovo.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Microsoft.Bcl.AsyncInterfaces.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/Microsoft.Win32.SystemEvents.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/System.Configuration.ConfigurationManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/System.Configuration.ConfigurationManager.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/System.Drawing.Common.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/System.Drawing.Common.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/System.Security.Permissions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/System.Security.Permissions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/System.Windows.Extensions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/System.Windows.Extensions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/bin/Debug/net7.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/Glovo.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/Glovo.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/Glovo.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/Glovo.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/Glovo.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/Glovo.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/Glovo.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/Glovo.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/Glovo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/Glovo.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/Glovo.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/Glovo.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/ref/Glovo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/ref/Glovo.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/refint/Glovo.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/Debug/net7.0/refint/Glovo.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/Glovo.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/Glovo.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/Glovo.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/Glovo.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/Glovo.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/Glovo.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Glovo/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Glovo/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moderator.Models/obj/Debug/net7.0/Moderator.Models.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Moderator.Models/obj/Debug/net7.0/Moderator.Models.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moderator.Models/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Moderator.Models/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="73f3c4b7-c8ae-4459-871c-4879c54df05a" />
+        <option name="url" value="https://github.com/Miha0809/Glovo.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/efaa7de985ac72768591fcc5269db133ade6e7f16d0c473c054ed9d6b32cd/UInt16.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Client.Models/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Companies.Models/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -101,7 +223,17 @@
       <workItem from="1680338509009" duration="170000" />
       <workItem from="1680338915777" duration="56000" />
       <workItem from="1680338988565" duration="71000" />
+      <workItem from="1680339076027" duration="445000" />
+      <workItem from="1680339547473" duration="1047000" />
     </task>
+    <task id="LOCAL-00001" summary="Authentication">
+      <created>1680339341084</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680339341084</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +254,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Authentication" />
+    <option name="LAST_COMMIT_MESSAGE" value="Authentication" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -18,4 +18,5 @@ public class Company : User
 
     public virtual required Email Email { get; set; }
     public virtual required Role Role { get; set; }
+    public virtual List<Product> Products { get; set; }
 }

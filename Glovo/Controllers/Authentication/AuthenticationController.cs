@@ -24,7 +24,6 @@ public class AuthenticationController : Controller
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] User user)
     {
-
         if (!ModelState.IsValid)
         {
             return BadRequest();
