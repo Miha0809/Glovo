@@ -2,14 +2,12 @@
 using Glovo.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 
 namespace Glovo.Controllers.Company;
 
 [Route("api/[controller]")]
 [ApiController]
-[Authorize(Roles = "Companies,Moderator")]
 public class ProductController : Controller
 {
     private readonly GlovoDbContext _context;
@@ -26,6 +24,7 @@ public class ProductController : Controller
     }
 
     [HttpPost]
+    [Authorize(Roles = "Companies,Moderator")]
     public async Task<IActionResult> Add([FromBody] Product product)
     {
         if (!ModelState.IsValid)
@@ -40,6 +39,7 @@ public class ProductController : Controller
     }
 
     [HttpPut]
+    [Authorize(Roles = "Companies,Moderator")]
     public async Task<IActionResult> Update([FromBody] Product product)
     {
         if (!ModelState.IsValid)
@@ -54,6 +54,7 @@ public class ProductController : Controller
     }
 
     [HttpDelete]
+    [Authorize(Roles = "Companies,Moderator")]
     public async Task<IActionResult> Delete([FromBody] int id)
     {
         if (!ModelState.IsValid)
