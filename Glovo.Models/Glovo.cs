@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Configure.Models;
+using Configure.Models.interfaces;
 
 namespace Glovo.Models;
 
-public class Glovo : User
+public class Glovo : IUser
 {
     [Key]
     public int Id { get; set; }

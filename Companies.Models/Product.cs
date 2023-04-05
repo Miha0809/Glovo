@@ -23,7 +23,7 @@ public class Product
     
     [StringLength(50)]
     [DataType(DataType.Text)]
-    public string? Producer { get; set; }
+    public string? Producer { get; set; } // Firma
     
     public virtual Category Category { get; set; }
 }

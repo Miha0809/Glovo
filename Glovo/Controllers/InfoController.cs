@@ -15,11 +15,15 @@ public class InfoController : Controller
         _context = context;
     }
 
-    [HttpGet]
+    [HttpGet("roles")]
     public async Task<IActionResult> Roles()
     {
-        var a = "";
-
         return Ok(await _context.Roles.ToListAsync());
+    }
+
+    [HttpGet("categories")]
+    public async Task<IActionResult> Categories()
+    {
+        return Ok(await _context.Categories.ToListAsync());
     }
 }

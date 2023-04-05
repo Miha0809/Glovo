@@ -24,7 +24,7 @@ public class ProductController : Controller
     }
 
     [HttpPost]
-    [Authorize(Roles = "Companies,Moderator")]
+    [Authorize(Roles = "Company,Moderator")]
     public async Task<IActionResult> Add([FromBody] Product product)
     {
         if (!ModelState.IsValid)
@@ -32,30 +32,40 @@ public class ProductController : Controller
             return BadRequest(ModelState);
         }
 
-        _context.Products.Add(product);
+        if (await _context.Categories.FirstOrDefaultAsync(category => category.Name.Equals(product.Category.Name)) ==
+            null)
+        {
+            // TODO: if it does not have a category in the database, then send it to the moderator for review
+            _context.Categories.Add(product.Category);
+        }
+
+        await _context.Products.AddAsync(product);
         await _context.SaveChangesAsync();
 
+        // TODO: Redirect to moderator
         return Ok(product);
     }
 
-    [HttpPut]
-    [Authorize(Roles = "Companies,Moderator")]
-    public async Task<IActionResult> Update([FromBody] Product product)
+    [HttpPut("{id:int}")]
+    [Authorize(Roles = "Company,Moderator")]
+    public async Task<IActionResult> Update(int id, [FromBody] Product product)
     {
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
 
-        _context.Update(product);
+        product.Id = id;
+        
+        _context.Products.Update(product);
         await _context.SaveChangesAsync();
 
-        return Ok(product);
+        return Ok(await _context.Products.FindAsync(id));
     }
 
-    [HttpDelete]
-    [Authorize(Roles = "Companies,Moderator")]
-    public async Task<IActionResult> Delete([FromBody] int id)
+    [HttpDelete("{id:int}")]
+    [Authorize(Roles = "Company,Moderator")]
+    public async Task<IActionResult> Delete(int id)
     {
         if (!ModelState.IsValid)
         {

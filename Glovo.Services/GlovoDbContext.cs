@@ -12,7 +12,8 @@ public class GlovoDbContext : DbContext
     // Companies
     public virtual DbSet<Companies.Models.Company> Companies { get; set; }
     public virtual DbSet<Companies.Models.Product> Products { get; set; }
-
+    public virtual DbSet<Companies.Models.Category> Categories { get; set; }
+    
     // Couriers
     public virtual DbSet<Courier.Models.Courier> Couriers { get; set; }
 

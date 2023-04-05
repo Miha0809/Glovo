@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Configure.Models;
+using Configure.Models.interfaces;
 
 namespace Moderator.Models;
 
-public class Moderator : User
+public class Moderator : IUser
 {
     [Key]
     public int Id { get; set; }
