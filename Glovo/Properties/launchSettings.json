@@ -18,7 +18,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "ACCESS_SECRET_KEY": "ThisIsAccessSecretKey123456789HaHaHaHa!",
-        "ACCESS_TIME_LIFE_KAY_MIN": "5",
+        "ACCESS_TIME_LIFE_KAY_MIN": "225",
         "REFRESH_SECRET_KEY": "ThisIsRefreshSecretKey123456789HaHaHaHa!",
         "REFRESH_TIME_LIFE_KAY_MIN": "256",
         "ISSUER": "Issuer",
@@ -34,7 +34,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "ACCESS_SECRET_KEY": "ThisIsAccessSecretKey123456789HaHaHaHa!",
-        "ACCESS_TIME_LIFE_KAY_MIN": "5",
+        "ACCESS_TIME_LIFE_KAY_MIN": "225",
         "REFRESH_SECRET_KEY": "ThisIsRefreshSecretKey123456789HaHaHaHa!",
         "REFRESH_TIME_LIFE_KAY_MIN": "256",
         "ISSUER": "Issuer",
@@ -48,7 +48,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "ACCESS_SECRET_KEY": "ThisIsAccessSecretKey123456789HaHaHaHa!",
-        "ACCESS_TIME_LIFE_KAY_MIN": "5",
+        "ACCESS_TIME_LIFE_KAY_MIN": "225",
         "REFRESH_SECRET_KEY": "ThisIsRefreshSecretKey123456789HaHaHaHa!",
         "REFRESH_TIME_LIFE_KAY_MIN": "256",
         "ISSUER": "Issuer",

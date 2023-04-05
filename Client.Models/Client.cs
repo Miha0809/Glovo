@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Configure.Models;
+using Configure.Models.interfaces;
 
 namespace Client.Models;
 
-public class Client : User
+public class Client : IUser
 {
     [Key]
     public int Id { get; set; }

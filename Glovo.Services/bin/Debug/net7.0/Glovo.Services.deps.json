@@ -10,11 +10,12 @@
         "dependencies": {
           "Client.Models": "1.0.0",
           "Companies.Models": "1.0.0",
-          "Curier.Models": "1.0.0",
+          "Courier.Models": "1.0.0",
           "Microsoft.AspNetCore.Authorization": "7.0.4",
           "Microsoft.EntityFrameworkCore": "7.0.4",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.4",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.4"
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.4",
+          "Moderator.Models": "1.0.0"
         },
         "runtime": {
           "Glovo.Services.dll": {}
@@ -643,6 +644,7 @@
       },
       "Client.Models/1.0.0": {
         "dependencies": {
+          "Configure.Models": "1.0.0",
           "Glovo.Models": "1.0.0",
           "ServiceStack.Interfaces": "6.7.0"
         },
@@ -652,23 +654,41 @@
       },
       "Companies.Models/1.0.0": {
         "dependencies": {
+          "Configure.Models": "1.0.0",
           "Glovo.Models": "1.0.0"
         },
         "runtime": {
           "Companies.Models.dll": {}
         }
       },
-      "Curier.Models/1.0.0": {
+      "Configure.Models/1.0.0": {
         "runtime": {
-          "Curier.Models.dll": {}
+          "Configure.Models.dll": {}
+        }
+      },
+      "Courier.Models/1.0.0": {
+        "dependencies": {
+          "Configure.Models": "1.0.0"
+        },
+        "runtime": {
+          "Courier.Models.dll": {}
         }
       },
       "Glovo.Models/1.0.0": {
         "dependencies": {
+          "Configure.Models": "1.0.0",
           "ServiceStack.Interfaces": "6.7.0"
         },
         "runtime": {
           "Glovo.Models.dll": {}
+        }
+      },
+      "Moderator.Models/1.0.0": {
+        "dependencies": {
+          "Configure.Models": "1.0.0"
+        },
+        "runtime": {
+          "Moderator.Models.dll": {}
         }
       }
     }
@@ -1137,12 +1157,22 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Curier.Models/1.0.0": {
+    "Configure.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Courier.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Glovo.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Moderator.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Configure.Models;
+using Configure.Models.interfaces;
 
 namespace Courier.Models;
 
-public class Courier : User
+public class Courier : IUser
 {
     [Key]
     public int Id { get; set; }
