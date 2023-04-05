@@ -7,6 +7,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Configure.Models;
+using Configure.Models.interfaces;
 
 namespace Glovo.Controllers.Authentication;
 
@@ -34,7 +35,8 @@ public class AuthenticationController : Controller
         try
         {
             // TODO: Remove ifs
-            if (user.Role!.Name.Equals((await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Client")))!.Name))
+            if (user.Role!.Name.Equals((await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Client")))!
+                    .Name))
             {
                 user.Role = await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Client"));
                 var client = new Client.Models.Client()
@@ -48,7 +50,8 @@ public class AuthenticationController : Controller
                 _context.Clients.Add(client);
                 await _context.SaveChangesAsync();
             }
-            else if (user.Role.Name.Equals((await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Company")))!.Name))
+            else if (user.Role.Name.Equals(
+                         (await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Company")))!.Name))
             {
                 user.Role = await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Company"));
                 var company = new Companies.Models.Company()
@@ -62,10 +65,11 @@ public class AuthenticationController : Controller
                 _context.Companies.Add(company);
                 await _context.SaveChangesAsync();
             }
-            else if (user.Role.Name.Equals((await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Courier")))!.Name))
+            else if (user.Role.Name.Equals(
+                         (await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Courier")))!.Name))
             {
                 user.Role = await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Courier"));
-                
+
                 var courier = new Courier.Models.Courier()
                 {
                     Name = user.Name!,
@@ -77,10 +81,11 @@ public class AuthenticationController : Controller
                 _context.Couriers.Add(courier);
                 await _context.SaveChangesAsync();
             }
-            else if (user.Role.Name.Equals((await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Glovo")))!.Name))
+            else if (user.Role.Name.Equals(
+                         (await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Glovo")))!.Name))
             {
                 user.Role = await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Glovo"));
-                
+
                 var glovo = new Glovo.Models.Glovo()
                 {
                     Name = user.Name!,
@@ -92,10 +97,11 @@ public class AuthenticationController : Controller
                 _context.Glovos.Add(glovo);
                 await _context.SaveChangesAsync();
             }
-            else if (user.Role.Name.Equals((await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Moderator")))!.Name))
+            else if (user.Role.Name.Equals(
+                         (await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Moderator")))!.Name))
             {
                 user.Role = await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Moderator"));
-                
+
                 var moderator = new Glovo.Models.Glovo()
                 {
                     Name = user.Name!,
@@ -119,11 +125,14 @@ public class AuthenticationController : Controller
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] Login login)
     {
-        User? user = null;
+        IUser? user = null;
 
         user ??= await _context.Clients.FirstOrDefaultAsync(client =>
             client.Email.Name.Equals(login.Email) && Hash.GetHash(login.Password).Equals(client.Password));
-        
+
+        user ??= await _context.Clients.FirstOrDefaultAsync(client =>
+            client.Email.Name.Equals(login.Email) && Hash.GetHash(login.Password).Equals(client.Password));
+
         user ??= await _context.Companies.FirstOrDefaultAsync(company =>
             company.Email.Name.Equals(login.Email) && Hash.GetHash(login.Password).Equals(company.Password));
 
@@ -132,7 +141,7 @@ public class AuthenticationController : Controller
 
         user ??= await _context.Glovos.FirstOrDefaultAsync(client =>
             client.Email.Name.Equals(login.Email) && Hash.GetHash(login.Password).Equals(client.Password));
-        
+
         user ??= await _context.Moderators.FirstOrDefaultAsync(client =>
             client.Email.Name.Equals(login.Email) && Hash.GetHash(login.Password).Equals(client.Password));
 
@@ -189,7 +198,7 @@ public class AuthenticationController : Controller
         var refreshToken =
             await _context.RefreshTokens.FirstOrDefaultAsync(token => token.Token.Equals(refresh.RefreshToken));
 
-        User? user = null;
+        IUser? user = null;
         user ??= await _context.Clients.FindAsync(refreshToken!.UserId);
         user ??= await _context.Companies.FindAsync(refreshToken!.UserId);
         user ??= await _context.Couriers.FindAsync(refreshToken!.UserId);
@@ -222,40 +231,42 @@ public class AuthenticationController : Controller
         });
     }
 
-    private string GenerateAccessToken(User user)
+    private string GenerateAccessToken(IUser user)
     {
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("ACCESS_SECRET_KEY") ?? string.Empty));
+        var key = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("ACCESS_SECRET_KEY") ?? string.Empty));
         var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha512);
         var claims = new List<Claim>
         {
             new("Id", user.Id.ToString()),
-            new("Email", user.Email!.Name),
-            new("Role", user.Role!.Name)
+            new("Email", user.Email.Name),
+            new("Role", user.Role.Name)
         };
         var issuer = Environment.GetEnvironmentVariable("ISSUER") ?? string.Empty;
         var audience = Environment.GetEnvironmentVariable("AUDIENCE") ?? string.Empty;
         int.TryParse(Environment.GetEnvironmentVariable("ACCESS_TIME_LIFE_KAY_MIN") ?? string.Empty, out var minutes);
         var token = new JwtSecurityToken(issuer: issuer,
-                                         audience: audience,
-                                         claims: claims,
-                                         notBefore: DateTime.UtcNow,
-                                         expires: DateTime.Now.AddMinutes(minutes),
-                                         signingCredentials: credentials);
+            audience: audience,
+            claims: claims,
+            notBefore: DateTime.UtcNow,
+            expires: DateTime.Now.AddMinutes(minutes),
+            signingCredentials: credentials);
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
 
     private string GenerateRefreshToken()
     {
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("REFRESH_SECRET_KEY") ?? string.Empty));
+        var key = new SymmetricSecurityKey(
+            Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("REFRESH_SECRET_KEY") ?? string.Empty));
         var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha512);
         var issuer = Environment.GetEnvironmentVariable("ISSUER") ?? string.Empty;
         var audience = Environment.GetEnvironmentVariable("AUDIENCE") ?? string.Empty;
         int.TryParse(Environment.GetEnvironmentVariable("REFRESH_TIME_LIFE_KAY_MIN") ?? string.Empty, out var minutes);
         var token = new JwtSecurityToken(issuer: issuer,
-                                         audience: audience,
-                                         notBefore: DateTime.UtcNow,
-                                         expires: DateTime.Now.AddMinutes(minutes),
-                                         signingCredentials: credentials);
+            audience: audience,
+            notBefore: DateTime.UtcNow,
+            expires: DateTime.Now.AddMinutes(minutes),
+            signingCredentials: credentials);
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
 
