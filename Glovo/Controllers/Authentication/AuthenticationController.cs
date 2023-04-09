@@ -8,6 +8,7 @@ using System.Security.Claims;
 using System.Text;
 using Configure.Models;
 using Configure.Models.interfaces;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Glovo.Controllers.Authentication;
 
@@ -39,9 +40,9 @@ public class AuthenticationController : Controller
                     .Name))
             {
                 user.Role = await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Client"));
-                var client = new Client.Models.Client()
+                var client = new global::Client.Models.Client()
                 {
-                    Name = user.Name!,
+                    Name = user.Name,
                     Email = user.Email!,
                     Password = user.Password,
                     Role = user.Role!
@@ -54,7 +55,7 @@ public class AuthenticationController : Controller
                          (await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Company")))!.Name))
             {
                 user.Role = await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Company"));
-                var company = new Companies.Models.Company()
+                var company = new global::Companies.Models.Company()
                 {
                     Name = user.Name!,
                     Email = user.Email!,
@@ -70,7 +71,7 @@ public class AuthenticationController : Controller
             {
                 user.Role = await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Courier"));
 
-                var courier = new Courier.Models.Courier()
+                var courier = new global::Courier.Models.Courier()
                 {
                     Name = user.Name!,
                     Email = user.Email!,
@@ -86,7 +87,7 @@ public class AuthenticationController : Controller
             {
                 user.Role = await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Glovo"));
 
-                var glovo = new Glovo.Models.Glovo()
+                var glovo = new global::Glovo.Models.Glovo()
                 {
                     Name = user.Name!,
                     Email = user.Email!,
@@ -102,7 +103,7 @@ public class AuthenticationController : Controller
             {
                 user.Role = await _context.Roles.FirstOrDefaultAsync(role => role.Name.Equals("Moderator"));
 
-                var moderator = new Glovo.Models.Glovo()
+                var moderator = new global::Glovo.Models.Glovo()
                 {
                     Name = user.Name!,
                     Email = user.Email!,

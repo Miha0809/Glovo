@@ -8,7 +8,7 @@ public interface IUser
 
     public string Password { get; set; }
 
-    public Email Email { get; set; }
+    public Email? Email { get; set; }
     
-    public Role Role { get; set; }
+    public Role? Role { get; set; }
 }

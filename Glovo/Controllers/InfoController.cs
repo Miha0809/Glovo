@@ -26,4 +26,14 @@ public class InfoController : Controller
     {
         return Ok(await _context.Categories.ToListAsync());
     }
+
+    [HttpGet("parameters")]
+    public IActionResult Parameters(int id, string name)
+    {
+        return Ok(new
+        {
+            Id = id,
+            Name = name
+        });
+    }
 }
