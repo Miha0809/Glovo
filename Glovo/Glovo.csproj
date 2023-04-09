@@ -31,4 +31,8 @@
     <ProjectReference Include="..\Glovo.Services\Glovo.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\Client\" />
+  </ItemGroup>
+
 </Project>

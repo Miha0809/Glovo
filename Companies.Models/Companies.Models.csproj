@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Client.Models\Client.Models.csproj" />
     <ProjectReference Include="..\Configure.Models\Configure.Models.csproj" />
     <ProjectReference Include="..\Glovo.Models\Glovo.Models.csproj" />
   </ItemGroup>
