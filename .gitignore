@@ -2,23 +2,37 @@
 .idea
 .vs
 
+Client.Models\bin
+Client.Models\obj
 Client.Models/bin
 Client.Models/obj
 
+Companies.Models\bin
+Companies.Models\obj
 Companies.Models/bin
 Companies.Models/obj
 
+Configure.Models\bin
+Configure.Models\obj
 Configure.Models/bin
 Configure.Models/obj
 
+Courier.Models\bin
+Courier.Models\obj
 Courier.Models/bin
 Courier.Models/obj
 
+Glovo.Models\bin
+Glovo.Models\obj
 Glovo.Models/bin
 Glovo.Models/obj
 
+Glovo.Services\bin
+Glovo.Services\obj
 Glovo.Services/bin
 Glovo.Services/obj
 
+Moderator.Models\bin
+Moderator.Models\obj
 Moderator.Models/bin
 Moderator.Models/obj
