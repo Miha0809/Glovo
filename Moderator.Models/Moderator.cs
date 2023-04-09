@@ -4,7 +4,7 @@ using Configure.Models.interfaces;
 
 namespace Moderator.Models;
 
-public class Moderator : IUser
+public sealed class Moderator : IUser
 {
     [Key]
     public int Id { get; set; }
@@ -18,6 +18,6 @@ public class Moderator : IUser
     [DataType(DataType.Password)]
     public required string Password { get; set; }
 
-    public virtual required Email Email { get; set; }
-    public virtual required Role Role { get; set; }
+    public required Email? Email { get; set; }
+    public required Role? Role { get; set; }
 }

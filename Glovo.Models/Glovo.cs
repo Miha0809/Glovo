@@ -19,5 +19,5 @@ public class Glovo : IUser
     public required string Password { get; set; }
 
     public virtual required Email Email { get; set; }
-    public virtual required Role Role { get; set; }
+    public virtual required Role? Role { get; set; }
 }

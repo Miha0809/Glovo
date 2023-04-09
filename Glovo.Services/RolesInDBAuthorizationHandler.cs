@@ -18,16 +18,15 @@ public class RolesInDBAuthorizationHandler : AuthorizationHandler<RolesAuthoriza
     protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context,
         RolesAuthorizationRequirement requirement)
     {
-        if (context.User == null || !context.User.Identity.IsAuthenticated)
+        if (context.User.Identity is { IsAuthenticated: false })
         {
             context.Fail();
             return;
         }
 
-        var found = false;
+        bool found;
 
-        if (requirement.AllowedRoles == null ||
-            requirement.AllowedRoles.Any() == false)
+        if (requirement.AllowedRoles.Any() == false)
         {
             // it means any logged in user is allowed to access the resource
             found = true;
@@ -39,7 +38,7 @@ public class RolesInDBAuthorizationHandler : AuthorizationHandler<RolesAuthoriza
                 .Where(p => roles.Contains(p.Name))
                 .Select(p => p.Id)
                 .ToListAsync();
-            var userRole = context.User.FindFirst("Role").Value;
+            var userRole = context.User.FindFirst("Role")?.Value;
 
             found = await _context.Roles
                 .Where(p => roleIds.Contains(p.Id) && p.Name.Equals(userRole))
