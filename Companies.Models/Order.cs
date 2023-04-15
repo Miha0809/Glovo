@@ -8,8 +8,10 @@ public class Order
     public int Id { get; set; }
     
     [DataType(DataType.Time)]
-    public DateTime Date { get; set; }
+    public DateTime Date { get; set; } = DateTime.Now;
+
+    public bool IsConfirm { get; set; }
     
-    public required Client.Models.Client Client { get; set; }
-    public required List<Product> Products { get; set; }
+    public virtual Client.Models.Client? Client { get; set; }
+    public virtual required List<Product> Products { get; set; }
 }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Glovo.Controllers.Company;
 
-[Route("api/[controller]")]
+[Route("api/company/[controller]")]
 [ApiController]
 [Authorize(Roles = "Company,Moderator")]
 public class OrderController : Controller
@@ -21,8 +21,18 @@ public class OrderController : Controller
     [HttpGet]
     public async Task<IActionResult> Get()
     {
-        return Ok(await _context.Orders.ToListAsync());
+        return Ok(await _context.Orders.OrderBy(x => x.IsConfirm).ToListAsync());
     }
 
-    // TODO: CUD ...
+    [HttpPut("{id:int}")]
+    public async Task<IActionResult> Update(int id, [FromBody] Order order)
+    {
+        return Ok();
+    }
+
+    [HttpDelete("{id:int}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        return Ok();
+    }
 }
