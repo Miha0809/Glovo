@@ -10,13 +10,25 @@ namespace Glovo.Controllers.Client;
 [Route("api/client/[controller]")]
 [ApiController]
 [Authorize(Roles = "Client,Moderator")]
-public class OrderController : ControllerBase
+public class OrderController : Controller
 {
     private readonly GlovoDbContext _context;
 
     public OrderController(GlovoDbContext context)
     {
         _context = context;
+    }
+
+    [HttpGet("companies")]
+    public async Task<IActionResult> Companies()
+    {
+        return Ok(await _context.Companies.Select(x => x.Name).ToListAsync());
+    }
+
+    [HttpGet("products")]
+    public async Task<IActionResult> Products(string name)
+    {
+        return Ok(await _context.Products.Where(product => product.CompanyName.Equals(name)).ToListAsync());
     }
 
     [HttpGet("delayed")]
@@ -34,12 +46,32 @@ public class OrderController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Add([FromBody] Order order)
+    public async Task<IActionResult> AddByObject([FromBody] Order order)
     {
         int.TryParse(HttpContext.User.FindFirstValue("Id"), out var id);
 
         order.Client = await _context.Clients.FirstAsync(client => client.Id.Equals(id));
 
+        await _context.AddAsync(order);
+        await _context.SaveChangesAsync();
+
+        return Ok(order);
+    }
+    
+    [HttpPost("{id:int}")]
+    public async Task<IActionResult> AddById(int id)
+    {
+        int.TryParse(HttpContext.User.FindFirstValue("Id"), out var clientId);
+
+        var order = new Order
+        {
+            Client = await _context.Clients.FirstAsync(client => client.Id.Equals(clientId)),
+            Products = new List<Product>
+            {
+                _context.Products.First(product => product.Id.Equals(id))
+            }
+        };
+        
         await _context.AddAsync(order);
         await _context.SaveChangesAsync();
 

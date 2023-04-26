@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using Companies.Models;
 using Glovo.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -18,21 +19,59 @@ public class OrderController : Controller
         _context = context;
     }
 
-    [HttpGet]
+    [HttpGet]   
     public async Task<IActionResult> Get()
     {
-        return Ok(await _context.Orders.OrderBy(x => x.IsConfirm).ToListAsync());
+        try
+        {
+            int.TryParse(HttpContext.User.FindFirstValue("Id"), out var id);
+            var company = await _context.Companies.FindAsync(id);
+        
+            // TODO: шукати свої не підтверджені замовлення
+            var vs = await _context.Orders.AsAsyncEnumerable().Where((order, index) => !order.IsConfirm && order.Products[index].CompanyName.Equals(company.Name)).ToListAsync();
+        
+            return Ok(new
+            {
+                One = await _context.Orders.Where(order => !order.IsConfirm).ToListAsync(),
+                Two = vs
+            });
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
 
     [HttpPut("{id:int}")]
-    public async Task<IActionResult> Update(int id, [FromBody] Order order)
+    public async Task<IActionResult> Confirm(int id, [FromBody] Order order)
     {
-        return Ok();
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        order.Id = id;
+        order.IsConfirm = true;
+
+        _context.Orders.Update(order);
+        await _context.SaveChangesAsync();
+        
+        return Ok(await _context.Orders.FindAsync(id));
     }
 
     [HttpDelete("{id:int}")]
     public async Task<IActionResult> Delete(int id)
     {
+        var order = await _context.Orders.FindAsync(id);
+
+        if (order is null)
+        {
+            return BadRequest();
+        }
+
+        _context.Orders.Remove(order);
+        await _context.SaveChangesAsync();
+        
         return Ok();
     }
 }

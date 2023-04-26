@@ -1,4 +1,5 @@
-﻿using Companies.Models;
+﻿using System.Security.Claims;
+using Companies.Models;
 using Glovo.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -6,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Glovo.Controllers.Company;
 
-[Route("api/[controller]")]
+[Route("api/company/[controller]")]
 [ApiController]
 public class ProductController : Controller
 {
@@ -27,11 +28,15 @@ public class ProductController : Controller
     [Authorize(Roles = "Company,Moderator")]
     public async Task<IActionResult> Add([FromBody] Product product)
     {
+        int.TryParse(HttpContext.User.FindFirstValue("Id"), out var id);
+        
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
 
+        product.CompanyName ??= _context.Companies.FindAsync(id).Result!.Name;
+        
         if (await _context.Categories.FirstOrDefaultAsync(category => category.Name.Equals(product.Category.Name)) ==
             null)
         {
@@ -72,7 +77,7 @@ public class ProductController : Controller
             return BadRequest(ModelState);
         }
 
-        var product = _context.Products.FirstOrDefault(product => product.Id.Equals(id));
+        var product = await _context.Products.FirstOrDefaultAsync(product => product.Id.Equals(id));
         
         _context.Products.Remove(product!);
         await _context.SaveChangesAsync();
