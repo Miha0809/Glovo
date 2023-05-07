@@ -11,7 +11,7 @@ public class Order
     public DateTime Date { get; set; } = DateTime.Now;
 
     public bool IsConfirm { get; set; }
-    
-    public virtual Client.Models.Client? Client { get; set; }
+
     public virtual required List<Product> Products { get; set; }
+    public virtual Client.Models.Client? Client { get; set; }
 }

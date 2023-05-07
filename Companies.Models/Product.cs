@@ -21,6 +21,6 @@ public class Product
     [DataType(DataType.MultilineText)]
     public required string Description { get; set; }
     
-    public string? CompanyName { get; set; }
+    public virtual Company? Company { get; set; }
     public virtual Category Category { get; set; }
 }

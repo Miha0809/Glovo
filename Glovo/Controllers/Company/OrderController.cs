@@ -1,5 +1,4 @@
 using System.Security.Claims;
-using Companies.Models;
 using Glovo.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -19,22 +18,33 @@ public class OrderController : Controller
         _context = context;
     }
 
-    [HttpGet]   
-    public async Task<IActionResult> Get()
+    [HttpGet("not_confirms")]
+    public async Task<IActionResult> GetNotConfirms()
     {
         try
         {
             int.TryParse(HttpContext.User.FindFirstValue("Id"), out var id);
+
             var company = await _context.Companies.FindAsync(id);
-        
-            // TODO: шукати свої не підтверджені замовлення
-            var vs = await _context.Orders.AsAsyncEnumerable().Where((order, index) => !order.IsConfirm && order.Products[index].CompanyName.Equals(company.Name)).ToListAsync();
-        
-            return Ok(new
-            {
-                One = await _context.Orders.Where(order => !order.IsConfirm).ToListAsync(),
-                Two = vs
-            });
+            var orders = await _context.Orders
+                .Where(order => !order.IsConfirm && order.Products.Any(product =>
+                    product.Company != null && product.Company.Name.Equals(company.Name)))
+                .ToListAsync();
+
+            // TODO: Add address
+
+            return Ok(orders.Select(order => new
+                {
+                    order.Id,
+                    order.Date,
+                    order.IsConfirm,
+                    ClientName = order.Client.Name,
+                    Products = order.Products.Select(product => new
+                    {
+                        product.Id, product.Price, product.Weight, product.Name, product.Description, product.Category
+                    })
+                })
+                .ToList());
         }
         catch (Exception e)
         {
@@ -42,21 +52,62 @@ public class OrderController : Controller
         }
     }
 
+    [HttpGet("confirms")]
+    public async Task<IActionResult> GetConfirms()
+    {
+        int.TryParse(HttpContext.User.FindFirstValue("Id"), out var id);
+
+        var company = await _context.Companies.FindAsync(id);
+        var orders = await _context.Orders
+            .Where(order => order.IsConfirm && order.Products.Any(product =>
+                product.Company != null && product.Company.Name.Equals(company.Name)))
+            .ToListAsync();
+
+        // TODO: Add address
+        return Ok(orders.Select(order => new
+            {
+                order.Id,
+                order.Date,
+                order.IsConfirm,
+                ClientName = order.Client.Name,
+                Products = order.Products.Select(product => new
+                    { product.Id, product.Price, product.Weight, product.Name, product.Description, product.Category })
+            })
+            .ToList());
+    }
+
     [HttpPut("{id:int}")]
-    public async Task<IActionResult> Confirm(int id, [FromBody] Order order)
+    public async Task<IActionResult> Confirm(int id)
     {
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
 
-        order.Id = id;
-        order.IsConfirm = true;
+        try
+        {
+            var order = await _context.Orders.FindAsync(id);
 
-        _context.Orders.Update(order);
-        await _context.SaveChangesAsync();
-        
-        return Ok(await _context.Orders.FindAsync(id));
+            order!.Id = id;
+            order.IsConfirm = true;
+
+            _context.Orders.Update(order);
+            await _context.SaveChangesAsync();
+
+            return Ok(new
+            {
+                order.Id,
+                order.Date,
+                order.IsConfirm,
+                ClientName = order.Client.Name,
+                Products = order.Products.Select(product => new
+                    { product.Id, product.Price, product.Weight, product.Name, product.Description, product.Category })
+            });
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
 
     [HttpDelete("{id:int}")]
@@ -71,7 +122,7 @@ public class OrderController : Controller
 
         _context.Orders.Remove(order);
         await _context.SaveChangesAsync();
-        
+
         return Ok();
     }
 }

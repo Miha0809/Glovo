@@ -28,7 +28,7 @@ public class OrderController : Controller
     [HttpGet("products")]
     public async Task<IActionResult> Products(string name)
     {
-        return Ok(await _context.Products.Where(product => product.CompanyName.Equals(name)).ToListAsync());
+        return Ok(await _context.Products.Where(product => product.Company!.Name.Equals(name)).ToListAsync());
     }
 
     [HttpGet("delayed")]
