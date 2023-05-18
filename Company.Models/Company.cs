@@ -2,7 +2,7 @@
 using Configure.Models;
 using Configure.Models.interfaces;
 
-namespace Companies.Models;
+namespace Company.Models;
 
 public class Company : IUser
 {
@@ -17,7 +17,7 @@ public class Company : IUser
     [DataType(DataType.Password)]
     public required string Password { get; set; }
 
-    public virtual Email? Email { get; set; }
+    public virtual Email Email { get; set; }
     public virtual Role? Role { get; set; }
     public virtual List<Product>? Products { get; set; }
 }

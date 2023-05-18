@@ -31,6 +31,8 @@ Glovo.Services\bin
 Glovo.Services\obj
 Glovo.Services/bin
 Glovo.Services/obj
+Glovo.Services\Migrations
+Glovo.Services/Migrations
 
 Moderator.Models\bin
 Moderator.Models\obj

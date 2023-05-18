@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Company.Models;
 using Configure.Models;
 using Configure.Models.interfaces;
 
@@ -17,6 +18,9 @@ public class Courier : IUser
     [DataType(DataType.Password)]
     public required string Password { get; set; }
 
+    public bool IsFree { get; set; } = true;
+    
     public virtual required Email Email { get; set; }
-    public virtual required Role? Role { get; set; }
+    public virtual required Role Role { get; set; }
+    public virtual Order? Order { get; set; }
 }

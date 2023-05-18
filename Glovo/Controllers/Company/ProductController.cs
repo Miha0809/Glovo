@@ -1,4 +1,5 @@
-﻿using Companies.Models;
+﻿using System.Security.Claims;
+using Company.Models;
 using Glovo.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -6,8 +7,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Glovo.Controllers.Company;
 
-[Route("api/[controller]")]
+[Route("api/company/[controller]")]
 [ApiController]
+[Authorize(Roles = "Company,Moderator")]
 public class ProductController : Controller
 {
     private readonly GlovoDbContext _context;
@@ -18,20 +20,24 @@ public class ProductController : Controller
     }
 
     [HttpGet]
+    [AllowAnonymous]
     public async Task<IActionResult> Get()
     {
         return Ok(await _context.Products.ToListAsync());
     }
 
     [HttpPost]
-    [Authorize(Roles = "Company,Moderator")]
     public async Task<IActionResult> Add([FromBody] Product product)
     {
+        int.TryParse(HttpContext.User.FindFirstValue("Id"), out var id);
+        
         if (!ModelState.IsValid)
         {
             return BadRequest(ModelState);
         }
 
+        product.Company ??= await _context.Companies.FindAsync(id);
+        
         if (await _context.Categories.FirstOrDefaultAsync(category => category.Name.Equals(product.Category.Name)) ==
             null)
         {
@@ -47,7 +53,6 @@ public class ProductController : Controller
     }
 
     [HttpPut("{id:int}")]
-    [Authorize(Roles = "Company,Moderator")]
     public async Task<IActionResult> Update(int id, [FromBody] Product product)
     {
         if (!ModelState.IsValid)
@@ -64,15 +69,9 @@ public class ProductController : Controller
     }
 
     [HttpDelete("{id:int}")]
-    [Authorize(Roles = "Company,Moderator")]
     public async Task<IActionResult> Delete(int id)
     {
-        if (!ModelState.IsValid)
-        {
-            return BadRequest(ModelState);
-        }
-
-        var product = _context.Products.FirstOrDefault(product => product.Id.Equals(id));
+        var product = await _context.Products.FirstOrDefaultAsync(product => product.Id.Equals(id));
         
         _context.Products.Remove(product!);
         await _context.SaveChangesAsync();

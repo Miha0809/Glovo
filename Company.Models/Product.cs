@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Companies.Models;
+namespace Company.Models;
 
 public class Product
 {
@@ -21,9 +21,6 @@ public class Product
     [DataType(DataType.MultilineText)]
     public required string Description { get; set; }
     
-    [StringLength(50)]
-    [DataType(DataType.Text)]
-    public string? Producer { get; set; } // Firma
-    
+    public virtual Company? Company { get; set; }
     public virtual Category Category { get; set; }
 }
