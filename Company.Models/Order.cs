@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Companies.Models;
+namespace Company.Models;
 
 public class Order
 {

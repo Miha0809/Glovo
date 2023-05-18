@@ -1,5 +1,5 @@
 using System.Security.Claims;
-using Companies.Models;
+using Company.Models;
 using Glovo.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

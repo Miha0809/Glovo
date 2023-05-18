@@ -1,4 +1,6 @@
 using System.Security.Claims;
+using AutoMapper;
+using Company.Models.Dtos;
 using Glovo.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -12,10 +14,11 @@ namespace Glovo.Controllers.Company;
 public class OrderController : Controller
 {
     private readonly GlovoDbContext _context;
-
-    public OrderController(GlovoDbContext context)
+    private readonly IMapper _mapper;
+    public OrderController(GlovoDbContext context, IMapper mapper)
     {
         _context = context;
+        _mapper = mapper;
     }
 
     [HttpGet("not_confirms")]
@@ -64,16 +67,8 @@ public class OrderController : Controller
             .ToListAsync();
 
         // TODO: Add address
-        return Ok(orders.Select(order => new
-            {
-                order.Id,
-                order.Date,
-                order.IsConfirm,
-                ClientName = order.Client.Name,
-                Products = order.Products.Select(product => new
-                    { product.Id, product.Price, product.Weight, product.Name, product.Description, product.Category })
-            })
-            .ToList());
+
+        return Ok(orders.Select(order => _mapper.Map<OrderDto>(order)).ToList());
     }
 
     [HttpPut("{id:int}")]
@@ -84,30 +79,21 @@ public class OrderController : Controller
             return BadRequest(ModelState);
         }
 
-        try
-        {
-            var order = await _context.Orders.FindAsync(id);
+        var order = await _context.Orders.FindAsync(id);
+        var couriers = await _context.Couriers.Where(courier => courier.IsFree).ToListAsync();
+        var random = new Random().Next(couriers.Count);
+        
+        order!.Id = id;
+        order.IsConfirm = true;
 
-            order!.Id = id;
-            order.IsConfirm = true;
+        couriers[random].IsFree = false;
+        couriers[random].Order = order;
 
-            _context.Orders.Update(order);
-            await _context.SaveChangesAsync();
+        _context.Couriers.Update(couriers[random]);
+        _context.Orders.Update(order);
+        await _context.SaveChangesAsync();
 
-            return Ok(new
-            {
-                order.Id,
-                order.Date,
-                order.IsConfirm,
-                ClientName = order.Client.Name,
-                Products = order.Products.Select(product => new
-                    { product.Id, product.Price, product.Weight, product.Name, product.Description, product.Category })
-            });
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
+        return Ok(_mapper.Map<OrderDto>(order));
     }
 
     [HttpDelete("{id:int}")]

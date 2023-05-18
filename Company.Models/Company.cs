@@ -2,7 +2,7 @@
 using Configure.Models;
 using Configure.Models.interfaces;
 
-namespace Companies.Models;
+namespace Company.Models;
 
 public class Company : IUser
 {
